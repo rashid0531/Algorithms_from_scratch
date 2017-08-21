@@ -8,7 +8,6 @@ def merge(A,p,q,r):
 
     n1 = q-p+1
     n2 = r-q
-
     # for storing the values of the array A in two temporary arrays.
     L= []
     R= []
@@ -18,7 +17,6 @@ def merge(A,p,q,r):
 
     for j in range(0,n2):
         R.append(A[q+j+1])
-
     '''
     The following two lines set the last element of the arrays as a max number the system can provide (infinite).
     this is called sentinels in cormens book and they are used to make sure the array has reached at end.
@@ -26,7 +24,6 @@ def merge(A,p,q,r):
     For example if the last element of left array is 23 and the right array is not yet finished traversing then the remaining elements of right array will be compared to 23.
     Which is wrong.
     '''
-
     L.append(sys.maxsize)
     R.append(sys.maxsize)
 
