@@ -5,6 +5,7 @@
 import sys,math
 
 def merge(A,p,q,r):
+
     n1 = q-p+1
     n2 = r-q
 
@@ -16,7 +17,7 @@ def merge(A,p,q,r):
         L.append(A[p+i])
 
     for j in range(0,n2):
-        R.append(A[q+j])
+        R.append(A[q+j+1])
 
     '''
     The following two lines set the last element of the arrays as a max number the system can provide (infinite).
@@ -32,7 +33,7 @@ def merge(A,p,q,r):
     i = 0
     j = 0
 
-    for k in range(p,r):
+    for k in range(p,r+1):
 
         if L[i] <= R[j]:
             A[k] = L[i]
@@ -55,7 +56,6 @@ def merge_sort(A,p,r):
 
 if __name__ == "__main__":
     inputArray= list(map(int, input().strip().split(' ')))
-    merge_sort(inputArray,0,len(inputArray))
+    merge_sort(inputArray,0,len(inputArray)-1)
     print(inputArray)
-
 
