@@ -1,8 +1,7 @@
-distance = [[0, 2, 5, 6, 7],
-            [-1, 0, 1, 3, 2],
-            [-1, -1, 0, 3, 4],
-            [-1, -1, -1, 0, 1],
-            [-1, -1, -1, -1, 0]]
+distance = [[0, 10, 75, 94],
+            [-1, 0, 35, 50],
+            [-1, -1, 0, 80],
+            [-1, -1, -1, 0]]
 
 
 def get_cost(point1_idx, point2_idx):
@@ -34,15 +33,13 @@ if __name__ == "__main__":
     name_to_dist_index_mapping = {'A': 0,
                                   'B': 1,
                                   'C': 2,
-                                  'D': 3,
-                                  'E': 4}
+                                  'D': 3}
     dis_idx_to_name_mapping = {0: 'A',
                                1: 'B',
                                2: 'C',
-                               3: 'D',
-                               4: 'E'}
+                               3: 'D'}
 
-    cost = min_cost('A', 'E', name_to_dist_index_mapping, dis_idx_to_name_mapping)
+    cost = min_cost('A', 'C', name_to_dist_index_mapping, dis_idx_to_name_mapping)
     print(cost)
 
 
